@@ -1,7 +1,5 @@
 # FRED MCP Server
 
-https://github.com/user-attachments/assets/059030bf-141b-4399-99aa-a2cd51abdf05
-
 A Model Context Protocol (MCP) server for accessing and analyzing Federal Reserve Economic Data (FRED).
 
 ## Overview
@@ -26,7 +24,7 @@ This server provides access to Federal Reserve Economic Data (FRED) using the FR
 ### Install from Source
 
 ```bash
-# Clone the repository
+# Fork the repository
 git clone https://github.com/yourusername/fred-mcp-server.git
 cd fred-mcp-server
 
