@@ -25,19 +25,14 @@ This server provides access to Federal Reserve Economic Data (FRED) using the FR
 
 ```bash
 # Fork the repository
-git clone https://github.com/yourusername/fred-mcp-server.git
-cd fred-mcp-server
+git clone https://github.com/milind-kulshrestha/fred-mcp-server.git
 
-# Create a virtual environment
-python -m venv venv
+# Create a virtual environment and activate it
+uv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install the package
-# Install with pip
-pip install .
-
-# Install with UV (recommended for exact dependency versions)
-uv pip install .
+# Install the packages with uv
+uv pip install -r requirements.txt
 ```
 
 ## Configuration
@@ -54,11 +49,9 @@ The server can be configured using environment variables:
 ### Running the Server
 
 ```bash
-# Run directly
-python -m fred_mcp_server
+# Run directly (the below points to fred.py)
+python -m fred
 
-# Or using the installed script
-fred-mcp
 ```
 
 ### Using with Claude for Desktop
