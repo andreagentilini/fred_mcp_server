@@ -37,12 +37,14 @@ class Settings:
         self.RATE_LIMIT_PERIOD = int(os.getenv("FRED_RATE_LIMIT_PERIOD", "60"))  # period in seconds
         
         # Storage settings
-        self.STORAGE_PATH = Path(os.getenv("FRED_STORAGE_PATH", "./data"))
-        
+        self.STORAGE_PATH = Path(os.getenv("FRED_STORAGE_PATH", str(Path.home() / ".fred_mcp_server" / "data")))
+        # self.STORAGE_PATH = Path(os.getenv("FRED_STORAGE_PATH", "./data"))
+
         # Logging settings
         self.LOG_LEVEL = os.getenv("FRED_LOG_LEVEL", "INFO")
-        self.LOG_FILE = os.getenv("FRED_LOG_FILE", "fred_mcp_server.log")
-        
+        # self.LOG_FILE = os.getenv("FRED_LOG_FILE", "fred_mcp_server.log")
+        self.LOG_FILE = os.getenv("FRED_LOG_FILE", str(Path.home() / ".fred_mcp_server" / "fred_mcp_server.log"))
+
         # Validate configuration
         self._validate_config()
     
